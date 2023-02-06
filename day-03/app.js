@@ -1,0 +1,106 @@
+/*
+let number = prompt('Enter number', 'Number goes here')
+console.log(number)
+const agree = confirm('Are you sure you want to cancel?')
+console.log(agree)
+const now = new Date()
+console.log(now)
+console.log(now.getFullYear())
+console.log(now.getMonth())
+console.log(now.getDay())
+console.log(now.getHours())
+*/
+
+// Exercise 1
+let firstName = 'Bob', lastName = 'Doe', country = 'Ireland', age = 30, isMarried = true
+console.log(typeof firstName)
+console.log(typeof age)
+console.log(typeof isMarried)
+console.log('10' === 10)
+console.log(parseInt('9.8') === 10)
+1 ? console.log("Truthy") : console.log('Falsy')
+'Bob' ? console.log("Truthy") : console.log('Falsy')
+true ? console.log("Truthy") : console.log('Falsy')
+0 ? console.log("Truthy") : console.log('Falsy')
+'' ? console.log("Truthy") : console.log('Falsy')
+false ? console.log("Truthy") : console.log('Falsy')
+console.log(4>3)
+console.log(4>=3)
+console.log(4<3)
+console.log(4<=3)
+console.log(4==4)
+console.log(4===4)
+console.log(4!=4)
+console.log(4!==4)
+console.log(4!='4')
+console.log(4=='4')
+console.log(4==='4')
+let python = 'python'
+let jargon = 'jargon'
+console.log(python.length, jargon.length)
+python == jargon ? console.log('truthy') : console.log('falsy')
+const now = new Date()
+console.log(now.getFullYear())
+console.log(now.getMonth())
+console.log(now.getDate())
+console.log(now.getDay())
+console.log(now.getHours())
+console.log(now.getMinutes())
+console.log(now.getTime())
+
+// Exercise 2
+/*
+const base = prompt('Enter base of Triangle')
+const height = prompt('Enter height of Triangle')
+console.log('area of triangle', 0.5 * base * height)
+const a = parseInt(prompt('Enter side a of triangle')) 
+const b = parseInt(prompt('Enter side b of triangle')) 
+const c = parseInt(prompt('Enter side c of triangle')) 
+console.log('perimeter of triangle', a + b + c)
+const recWidth = parseInt(prompt('Enter width of rectangle'))
+const recHeight = parseInt(prompt('Enter height of rectangle'))
+console.log(`area of rectangle`, recWidth * recHeight)
+console.log(`perimeter of rectangle`, 2 * (recWidth + recHeight))
+const radius = parseInt(prompt('Enter radius of circle'))
+console.log('Area of circle',Math.PI * radius * radius)
+console.log('circumference of circle', 2 * Math.PI * radius)
+const x1 = parseInt(prompt('Enter point x1'))
+const y1 = parseInt(prompt('Enter point y1'))
+const x2 = parseInt(prompt('Enter point x2'))
+const y2 = parseInt(prompt('Enter point y2'))
+console.log('slope:', (y2 - y1) / (x2 - x1))
+*/
+const hours = parseInt(prompt('Enter Hours'))
+const rate = parseInt(prompt('Enter Rate'))
+console.log('Your weekly earnings is:', hours * rate)
+const name = prompt('Enter name:')
+name.length > 7 ? console.log('Your name is long') : console.log('Your name is short')
+const fName = prompt('Enter first name')
+const lName = prompt('Enter last name')
+fName.length > lastName ? console.log(`Your first name ${fName} is longer than your family name ${lName}`) : console.log(`Your first name ${fName} is longer than your family name ${lName}`)
+const myAge = 250
+const yourAge = 25
+console.log('I am', myAge - yourAge, 'older than you')
+const birthYear = parseInt(prompt('Enter year of birth'))
+const nowDate = new Date()
+const yo = nowDate.getFullYear() - birthYear
+yo >= 18 ? console.log(`You are ${yo}.. You are old enough to drive`) : console.log(`You are ${yo}. You will be allowed to drive after`, 18 - yo, 'years')
+const nowYear = nowDate.getFullYear()
+const nowMonth = nowDate.getMonth()
+const nowDay = nowDate.getDate()
+const nowHour = nowDate.getHours()
+const nowMin = nowDate.getMinutes()
+console.log(`${nowYear}-${nowMonth}-${nowDay} ${nowHour}:${nowMin}`)
+console.log(`${nowDay}-${nowMonth}-${nowYear} ${nowHour}:${nowMin}`)
+console.log(`${nowDay}/${nowMonth}/${nowYear} ${nowHour}:${nowMin}`)
+
+// Exercise 3
+let hourNow = nowDate.getHours()
+let minNow = nowDate.getMinutes()
+if(hourNow < 10){
+    hourNow = 0 + hourNow.toString()
+}  
+if(minNow < 10){
+    minNow = 0 + minNow.toString()
+}  
+console.log(`${hourNow}:${minNow}`)
