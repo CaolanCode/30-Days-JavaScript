@@ -39,3 +39,26 @@ itCompanies.pop()
 console.log(itCompanies)
 itCompanies = []
 console.log(itCompanies)
+
+// Exercise 2
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+let words = text.split(' ')
+words = words.map(word => word.replace(/[.,]/g, ""))
+console.log(words)
+console.log(words.length)
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.unshift('Meat')
+shoppingCart.push('Sugar')
+let index = shoppingCart.indexOf('Honey')
+shoppingCart.splice(index, 1)
+index = shoppingCart.indexOf('Tea')
+shoppingCart[index] = 'Green Tea'
+console.log(shoppingCart)
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+const fullStack = frontEnd.concat(backEnd)
+console.log(fullStack)
+
+import { countries } from "./countries"
+console.log(countries)
