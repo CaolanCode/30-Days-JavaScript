@@ -59,3 +59,25 @@ const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 const backEnd = ['Node','Express', 'MongoDB']
 const fullStack = frontEnd.concat(backEnd)
 console.log(fullStack)
+
+
+// Exercise 3
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+const sorted = ages.sort((a,b) => a > b ? 1 : -1)
+console.log(sorted)
+console.log('min',sorted[0])
+console.log('max',sorted[sorted.length-1])
+let sortIndex = Math.floor(sorted.length/2)
+if(sorted.length % 2 === 0) {
+    console.log('median:', (sorted[sortIndex] + sorted[sortIndex+1]) / 2 )
+} else {
+    console.log('median:',sorted[sortIndex])
+}
+const total = sorted.reduce((total, item) => {
+    return total + item
+}, 0)
+const sortedAverage = total / sorted.length
+console.log('average:',sortedAverage)
+console.log('range', sorted[sorted.length-1] - sorted[0])
+console.log('min-average:', Math.abs(sorted[0] - sortedAverage))
+console.log('max-average',Math.abs(sorted[sorted.length-1] - sortedAverage))
