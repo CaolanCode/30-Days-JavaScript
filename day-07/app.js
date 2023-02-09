@@ -271,4 +271,58 @@ function userIdGenerator() {
 }
 console.log(userIdGenerator())
 
+// Exercise 3
+function  userIdGeneratedByUser() {
+    let sizeOfId = parseInt(prompt('Enter size of id:'))
+    let numOfIds = parseInt(prompt('Enter number of ID\'s:'))
+    let id = ''
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for(let i = 0; i < numOfIds; i++) {
+        id = ''
+        for(let j = 0; j < sizeOfId; j++) {
+            id += characters.charAt(Math.floor(Math.random() * characters.length))
+        }
+        console.log(id)
+    }
+}
+//console.log(userIdGeneratedByUser())
 
+function rgbColorGenerator() {
+    let r = Math.floor(Math.random() * 255)
+    let g = Math.floor(Math.random() * 255)
+    let b = Math.floor(Math.random() * 255)
+    console.log(`rgb(${r},${g},${b})`)
+}
+rgbColorGenerator()
+
+function arrayOfHexaColors(size) {
+    let color = ''
+    const colorArray = []
+    for(let i = 0; i < size; i++) {
+        color = '#'
+        for(let j = 0; j < 6; j++) {
+            color += (Math.floor(Math.random() * 16)).toString(16)
+        }
+        colorArray.push(color)
+    }
+    return colorArray
+}
+console.log(arrayOfHexaColors(4))
+
+function arrayOfRGBColors(size) {
+    let colorArray = []
+    let rgb = ''
+    for(let i = 0; i < size; i++) {
+        let r = Math.floor(Math.random() * 255)
+        let g = Math.floor(Math.random() * 255)
+        let b = Math.floor(Math.random() * 255)
+        rgb = `rgb(${r},${g},${b})`
+        colorArray.push(rgb)
+    }
+    return colorArray
+}
+console.log(arrayOfRGBColors(4))
+
+function convertRGBToHexa(rgb) {
+
+}
