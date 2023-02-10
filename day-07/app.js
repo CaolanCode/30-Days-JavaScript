@@ -323,6 +323,21 @@ function arrayOfRGBColors(size) {
 }
 console.log(arrayOfRGBColors(4))
 
-function convertRGBToHexa(rgb) {
-
+function convertRGBToHexa(r, g, b) {
+  return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b)
 }
+function componentToHex(value) {
+  let hex = value.toString(16)
+  return hex.length == 1 ? '0' + hex : hex
+}
+console.log(convertRGBToHexa(28,135,201))
+
+function convertHexaToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16),
+  } : null
+}
+console.log(convertHexaToRgb('#0033ff'))
