@@ -24,3 +24,14 @@ countries.forEach(country => {
   countryMap.set(country, country.length)
 })
 console.log(countryMap)
+
+// exercise 2
+const A = new Set(a)
+const B = new Set(b)
+const c = [...a, ...b]
+const C = new Set(c)
+console.log(C)
+
+const inter = a.filter(num => B.has(num))
+const intersection = new Set(inter)
+console.log(intersection)
