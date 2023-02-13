@@ -9,3 +9,10 @@ const points = pointsArr.match(/[-]?\d+/g)
 const sortPoints = points.sort((a,b) => parseInt(a) > parseInt(b) ? 1 : -1)
 const difference = parseInt(sortPoints[sortPoints.length-1]) - parseInt(sortPoints[0]) 
 console.log(difference)
+
+function valid_variable(name) {
+  const result = /^[0-9]+[-]*/.test(name)
+  return result
+}
+
+console.log(!valid_variable('firstName'))
