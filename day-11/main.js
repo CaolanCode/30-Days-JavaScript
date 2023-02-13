@@ -62,3 +62,13 @@ const {width, height, area, perimeter} = rectangle
 console.log(width, height, area, perimeter)
 
 
+// Exercise 2
+for(const {name, scores, skills, age} of users) {
+  console.log(name, scores, skills, age)
+}
+
+for(const {name, skills} of users) {
+  if(skills.length < 2) {
+    console.log(name)
+  }
+}
